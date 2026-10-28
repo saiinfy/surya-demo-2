@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Flask App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+            background: #f4f7fb;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            margin: auto;
+            max-width: 400px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px #ddd;
+        }
+
+        input, button {
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        button {
+            background: #2563eb;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Flask!</h1>
+        <p>Enter your name to get started.</p>
+
+        <form method="POST">
+            <input
+                type="text"
+                name="name"
+                placeholder="Enter your name"
+                required
+            >
+            <button type="submit">Submit</button>
+        </form>
+
+        {% if name %}
+            <h2>Hello, {{ name }}!</h2>
+            <p>Your Flask application is working.</p>
+        {% endif %}
+    </div>
+</body>
+</html>
